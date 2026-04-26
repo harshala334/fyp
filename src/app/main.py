@@ -113,12 +113,12 @@ with tab1:
 with tab2:
     st.subheader("Model Performance Comparison")
     metrics_data = {
-        "Model": ["DAM-CMA (Ours)", "Simple Fusion", "Text-Only", "Image-Only"],
-        "Accuracy": ["89.4%", "82.1%", "78.5%", "71.2%"],
-        "F1-Score": ["0.88", "0.81", "0.77", "0.69"],
-        "Precision": ["0.90", "0.83", "0.79", "0.73"]
+        "Model": ["DAM-CMA (Ours)", "Simple Fusion", "Image-Only", "Text-Only"],
+        "Accuracy": ["97.60%", "95.38%", "95.07%", "68.58%"],
+        "F1-Score": ["0.97", "0.94", "0.94", "0.61"],
+        "Precision": ["0.98", "0.95", "0.96", "0.64"]
     }
     st.table(metrics_data)
     
     st.subheader("Architecture Overview")
-    st.image("https://raw.githubusercontent.com/harshala334/fyp/main/src/utils/arch_placeholder.png", caption="DAM-CMA Architecture (Adversarial Fusion)")
+    st.image("src/utils/architecture.png", caption="DAM-CMA Architecture (Adversarial Fusion)")
