@@ -51,7 +51,7 @@ class CMA_Fusion(nn.Module):
 
 # 3. The Main DAM-CMA Model
 class DAM_CMA_Model(nn.Module):
-    def __init__(self, freeze_encoders=True):
+    def __init__(self, num_domains=2, freeze_encoders=True):
         super(DAM_CMA_Model, self).__init__()
 
         # Encoders
@@ -79,7 +79,7 @@ class DAM_CMA_Model(nn.Module):
             nn.Linear(1024, 256),
             nn.ReLU(),
             nn.Dropout(0.3),
-            nn.Linear(256, 1)
+            nn.Linear(256, num_domains)
         )
 
     def forward(self, input_ids, attention_mask, pixel_values, alpha=1.0):
