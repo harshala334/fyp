@@ -1,0 +1,24 @@
+# Environments
+venv/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Images (Too large for GitHub)
+dataset/
+data/
+raw_data/
+
+# Model Weights
+*.pth
+models/checkpoint/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
